@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s[4],week[]={"MON","THU","WED","THU","FRI","SAT","SUN"};
+    for(int i=0;i<4;i++)
+    {
+        cin>>s[i];
+    }
+    int flag=1;
+    char da;
+    while(flag)
+    {
+        for(int i=0;i<s[0].size();i++)
+        {
+            if(s[0][i]>='A'&&s[0][i]<='Z')
+            {
+                da=s[0][i];
+                break;
+            }
+        }
+        for(int i=0;i<s[1].size();i++)
+        {
+            if(s[1][i]>='A'&&s[1][i]<='Z'&&da==s[1][i])
+            {
+                flag=0;
+                break;
+            }
+        }
+    }
+    return 0;
+}
